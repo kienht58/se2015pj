@@ -15,4 +15,12 @@ ActiveAdmin.register Answer do
     permit_params :choice, :is_correct
     
     belongs_to :question
+    
+    index do
+        selectable_column
+        id_column
+        column :choice
+        column :is_correct
+        actions
+    end
 end
