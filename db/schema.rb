@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151111152848) do
+ActiveRecord::Schema.define(version: 20151115074720) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -72,5 +72,15 @@ ActiveRecord::Schema.define(version: 20151111152848) do
   end
 
   add_index "questions", ["category_id"], name: "index_questions_on_category_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "facebook_id"
+    t.string   "avatar"
+    t.integer  "highscore"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
 end

@@ -19,12 +19,12 @@ end
 
     index do 
         selectable_column
-       id_column
-       column :name
-       column :updated_at
-       column "Questions" do |category|
-       link_to "Questions", admin_category_questions_path(category)
-    end
-    actions
+        id_column
+        column :name
+        column :updated_at
+        column "Questions" do |category|
+            link_to "Questions", admin_category_questions_path(category)
+        end
+        actions
     end
 end
